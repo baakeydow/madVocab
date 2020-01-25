@@ -1,0 +1,17 @@
+div.mad-vocab {
+  min-height: 90%;
+  div.MainAppContainer {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 90% !important;
+    min-height: 80vh;
+    h1 {
+      margin: 20px !important;
+      span {
+        color: #3ddb7b !important;
+      }
+    }
+  }
+}
+

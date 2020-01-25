@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    /* Only esnext and commonjs allow dynamic imports */
+    "module": "commonjs",
+    "target": "es6",
+    "paths": {
+      "*": [
+        "*"
+      ]
+    },
+    "esModuleInterop": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "rootDir": "./",
+    "outDir": "../build/back-dist",
+    "typeRoots": [ "node_modules/@types" ],
+    "baseUrl": "./src",
+    "allowJs": false
+  }
+}

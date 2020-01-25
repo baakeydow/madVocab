@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    /* Only esnext and commonjs allow dynamic imports */
+    "module": "esnext",
+    "paths": {
+      "*": [
+        "*"
+      ]
+    },
+    "rootDir": "./",
+    "outDir": "../build/front-dist",
+    "baseUrl": "./src",
+  },
+  "allowJs": false
+}

@@ -1,0 +1,6 @@
+{
+  "mongodb": {
+    "mongoUrl": "mongodb://localhost:27017",
+    "mongoSecret": "MadVocab"
+  }
+}

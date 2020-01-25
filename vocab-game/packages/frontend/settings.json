@@ -1,0 +1,5 @@
+{
+  "backendUrl": "http://localhost:9999",
+  "contextPath": "/",
+  "https": false
+}

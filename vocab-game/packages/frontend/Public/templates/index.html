@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MadVocab</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="MadVocab" class="mad-vocab">Loading...</div>
+    <script type="text/javascript">
+        var MadVocabFront = window['MadVocab/Game/Front'];
+        if (MadVocabFront) {
+            var l = window.location;
+            var backendUrl = l.protocol + '//' + l.host + l.pathname.substring(0, l.pathname.lastIndexOf('/'));
+            new MadVocabFront.Builder(document.getElementById("MadVocab"), { backendUrl }).render();
+        } else {
+            console.error('The project has not been built yet... please reload');
+        }
+ </script>
+</body>
+</html>
