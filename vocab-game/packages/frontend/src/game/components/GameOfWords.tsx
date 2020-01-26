@@ -47,13 +47,7 @@ class GameOfWords extends React.Component<Props, State> {
         this.setState({ current_word: current_game?.words[this.state.wordsFound] });
     }
     if (current_game.lvl !== prevProps.game.current_game.lvl) {
-      this.setState({
-        current_word: current_game.words[0],
-        pts: 10,
-        current_try: '',
-        visible: true,
-        wordsFound: 0
-      });
+        this.resetGame();
     }
   }
 
@@ -76,13 +70,7 @@ class GameOfWords extends React.Component<Props, State> {
       const { uid } = this.props.auth.logged_user
       const { lvl } = this.props.game.current_game
       this.props.onGetNextLevel(uid, lvl).then(() => {
-        this.setState({
-          current_word: this.props.game.current_game?.words[0],
-          pts: 10,
-          current_try: '',
-          visible: true,
-          wordsFound: 0
-        });
+        this.resetGame();
       })
     }, 3000);
   }
